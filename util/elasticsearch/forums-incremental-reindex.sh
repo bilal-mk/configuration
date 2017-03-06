@@ -25,7 +25,7 @@ set -euo pipefail
 INDEX="$1"
 WINDOW="${2:-5}"
 SLEEP_TIME="${3:-60}"
-BATCH_SIZE="${3:-500}"
+BATCH_SIZE="${4:-500}"
 
 if [ "$SLEEP_TIME" -ge "$((WINDOW * 60))" ]; then
   echo 'ERROR: SLEEP_TIME must not be longer than WINDOW, or else documents may be missed.'
