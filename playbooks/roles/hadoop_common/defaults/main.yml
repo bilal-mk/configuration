@@ -48,8 +48,11 @@ hadoop_common_env: "{{ HADOOP_COMMON_HOME }}/hadoop_env"
 # OS packages
 #
 
+# Try replacing llvm-gcc with llvm and gcc separately?  Others seem to be present.
+#   - llvm-gcc
+
 hadoop_common_debian_pkgs:
-  - llvm-gcc
+  - gcc
   - build-essential
   - make
   - cmake
